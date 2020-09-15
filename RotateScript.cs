@@ -1,25 +1,64 @@
 ﻿using UnityEngine;
 
 /*
-*  Copyright (c) Jonathan Carter
+*  Carter Games Utilities Script
+*  Copyright (c) Carter Games
+*  W: https://carter.games
+*  
+*  Written by:
+*  Jonathan Carter
 *  E: jonathan@carter.games
-*  W: https://jonathan.carter.games/
+*  W: https://jonathan.carter.games
 */
 
 namespace CarterGames.Utilities
 {
+    /// <summary>
+    /// CLASS | Rotate Script, rotates objects based on the inputted values.
+    /// </summary>
     public class RotateScript : MonoBehaviour
     {
-        [SerializeField] private bool xAxis = false;      // Bool for the XAxis
-        [SerializeField] private bool yAxis = false;      // Bool for the YAxis
-        [SerializeField] private bool zAxis = false;      // Bool for the ZAxis
-        [SerializeField] private float speed = 1;         // Float for the speed of the rotation
+        /// <summary>
+        /// Defines whether or not the X axis should be rotated.
+        /// </summary>
+        [Header("Which axis should be rotated?")]
+        [ToolTip("Should the X axis be rotated?")]
+        [SerializeField] private bool xAxis = false;
 
-        private bool shouldRotateObject = true;           // boolean that enables or disables the rotation of an object (also sets it to true as default)
+        /// <summary>
+        /// Defines whether or not the Y axis should be rotated.
+        /// </summary>
+        [ToolTip("Should the Y axis be rotated?")]
+        [SerializeField] private bool yAxis = false;
+
+        /// <summary>
+        /// Defines whether or not the Z axis should be rotated.
+        /// </summary>
+        [ToolTip("Should the Z axis be rotated?")]
+        [SerializeField] private bool zAxis = false;
+
+        /// <summary>
+        /// Defines the speed that the object is rotated at.
+        /// </summary>
+        [Header("Rotation Speed.")]
+        [ToolTip("The speed of which the object will rotated at.")]
+        [SerializeField] private float speed = 1;
+
+        /// <summary>
+        /// Boolean that enables or disables the rotation of an object (also sets it to true as default)
+        /// </summary>
+        private bool shouldRotateObject = true;
 
 
+        /// ------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Unity | Fixed Update Method
+        ///   Rotates the object in fixed update if the rotation boolean is true.
+        /// </summary>
+        /// ------------------------------------------------------------------------------------------------------
         private void FixedUpdate()
         {
+            // Checks to see if the object should be rotated.
             if (shouldRotateObject)
             {
                 // Roates the object with whatever rotation selected at the desired speed (note there is not time.deltatime here so its small changes
@@ -28,11 +67,14 @@ namespace CarterGames.Utilities
         }
 
 
+        /// ------------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Function to convert boolean to int for use in the ratation
+        /// Method | Convert Boolean
+        ///   Function to convert boolean to int for use in the rotation.
         /// </summary>
         /// <param name="input">the inputted boolean value</param>
         /// <returns>an int value for the inputted boolean</returns>
+        /// ------------------------------------------------------------------------------------------------------
         private int ConvertBool(bool input)
         {
             int convert;
@@ -41,9 +83,12 @@ namespace CarterGames.Utilities
         }
 
 
+        /// ------------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Enables the rotation
+        /// Method | Enable Rotation
+        ///   Enables the rotation of the object this is attached to.
         /// </summary>
+        /// ------------------------------------------------------------------------------------------------------
         public void EnableRotation()
         {
             if (!shouldRotateObject)
@@ -53,9 +98,12 @@ namespace CarterGames.Utilities
         }
 
 
+        /// ------------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Disables the rotation
+        /// Method | Disable Rotation
+        ///   Disables the rotation of the object this is attached to.
         /// </summary>
+        /// ------------------------------------------------------------------------------------------------------
         public void DisableRotation()
         {
             if (shouldRotateObject)
