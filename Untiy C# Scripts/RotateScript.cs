@@ -22,26 +22,26 @@ namespace CarterGames.Utilities
         /// Defines whether or not the X axis should be rotated.
         /// </summary>
         [Header("Which axis should be rotated?")]
-        [ToolTip("Should the X axis be rotated?")]
+        [Tooltip("Should the X axis be rotated?")]
         [SerializeField] private bool xAxis = false;
 
         /// <summary>
         /// Defines whether or not the Y axis should be rotated.
         /// </summary>
-        [ToolTip("Should the Y axis be rotated?")]
+        [Tooltip("Should the Y axis be rotated?")]
         [SerializeField] private bool yAxis = false;
 
         /// <summary>
         /// Defines whether or not the Z axis should be rotated.
         /// </summary>
-        [ToolTip("Should the Z axis be rotated?")]
+        [Tooltip("Should the Z axis be rotated?")]
         [SerializeField] private bool zAxis = false;
 
         /// <summary>
         /// Defines the speed that the object is rotated at.
         /// </summary>
         [Header("Rotation Speed.")]
-        [ToolTip("The speed of which the object will rotated at.")]
+        [Tooltip("The speed of which the object will rotated at.")]
         [SerializeField] private float speed = 1;
 
         /// <summary>

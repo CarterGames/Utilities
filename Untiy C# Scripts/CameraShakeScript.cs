@@ -32,6 +32,11 @@ namespace CarterGames.Utilities
         [SerializeField] private bool shouldCameraShake;
 
         /// <summary>
+        /// Should the camera shake it 2d or 3d space?
+        /// </summary>
+        private bool is2D;
+
+        /// <summary>
         /// How much the camera should shake, is set to the force defined by the user in the Shake Camera Method.
         /// </summary>
         private float shakeAmount;
@@ -54,7 +59,7 @@ namespace CarterGames.Utilities
         /// <summary>
         /// The camera to shake.
         /// </summary>
-        private Camera mainCamera;
+        private GameObject mainCamera;
 
 
         /// ------------------------------------------------------------------------------------------------------
@@ -78,7 +83,7 @@ namespace CarterGames.Utilities
         private void Start()
         {
             // Reference to the main camera
-            mainCamera = Camera.main;
+            mainCamera = gameObject;
         }
 
 
@@ -91,9 +96,13 @@ namespace CarterGames.Utilities
         /// ------------------------------------------------------------------------------------------------------
         private void Update()
         {
-            if (shouldCameraShake)
+            if (shouldCameraShake && !is2D)
             {
-                mainCamera.transform.localPosition = new Vector3(Random.insideUnitSphere.x * shakeAmount, Random.insideUnitSphere.y * shakeAmount, mainCamera.transform.position.z);
+                mainCamera.transform.localPosition += new Vector3(Random.insideUnitSphere.x * shakeAmount, Random.insideUnitSphere.y * shakeAmount, Random.insideUnitSphere.z * shakeAmount);
+            }
+            else if (shouldCameraShake && is2D)
+            {
+                mainCamera.transform.localPosition += new Vector3(Random.insideUnitSphere.x * shakeAmount, Random.insideUnitSphere.y * shakeAmount, mainCamera.transform.position.z);
             }
 
             if ((shouldCameraShake) && (!isCoRunning))
@@ -128,9 +137,10 @@ namespace CarterGames.Utilities
         /// <param name="shakeForce">the amount of force to apply. Default = 0.1f</param>
         /// <param name="shakeLenght">the duration for the effect. Default = 0.25f</param>
         /// ------------------------------------------------------------------------------------------------------
-        public void ShakeCamera(float shakeForce = .1f, float shakeLenght = .25f)
+        public void ShakeCamera(bool should2D = false, float shakeForce = .1f, float shakeLenght = .25f)
         {
             // Only edited if inputted, otherwise defaulf values are entered
+            is2D = should2D;
             shakeAmount = shakeForce;
             shakeDuration = shakeLenght;
 
