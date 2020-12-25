@@ -66,7 +66,7 @@ namespace CarterGames.Utilities
             {
                 if (!useLocalRot && !transform.rotation.Equals(startRot))
                     transform.rotation = startRot;
-                else if (!transform.localRotation.Equals(startRot)))
+                else if (!transform.localRotation.Equals(startRot))
                     transform.localRotation = startRot;
             }
         }
@@ -83,7 +83,7 @@ namespace CarterGames.Utilities
             {
                 if (!useLocalRot && !transform.rotation.Equals(startRot))
                     transform.rotation = startRot;
-                else if (!transform.localRotation.Equals(startRot)))
+                else if (!transform.localRotation.Equals(startRot))
                     transform.localRotation = startRot;
             }
         }

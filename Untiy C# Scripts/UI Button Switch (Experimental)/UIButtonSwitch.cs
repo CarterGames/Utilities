@@ -12,7 +12,7 @@ using System.Collections;
  *	    
  *	Requirements:
  *	    - New Unity Input System
- *	    - InputActions class "Actions" (Edit Lines: 80, 110, 113, 131, 160, 164, 171, 175, 188, 192, 199, 203, 216, 220, 225, 229, if not)
+ *	    - InputActions class called "Actions" (Edit Lines: 80, 110, 113, 131, 160, 164, 171, 175, 188, 192, 199, 203, 216, 220, 225, 229, if not)
  *	    - Input Map called "Movement" of type Vector2 for controllers. (Edit Lines: 160, 164, 171, 175, 188, 192, 199, 203, 216, 220, 225, 229, if not)
  *			
  *  Written by:
@@ -35,27 +35,27 @@ namespace CarterGames.Utilities
         /// GameObject Array | A grouping of all the buttons in the menu to effect.
         /// </summary>
         [Header("UI Buttons")]
-        [ToolTip("The buttons to effect, these should have UIBS Button Actions on them.")]
+        [Tooltip("The buttons to effect, these should have UIBS Button Actions on them.")]
         [SerializeField] internal GameObject[] buttons;
         [Space(5f)]
 
         /// <summary>
         /// Bool | Defines whether or not the menu navigates up/down.
         /// </summary>
-        [ToolTip("If the menu navigates Up/Down the set this to true, for Left/Right leave it false.")]
+        [Tooltip("If the menu navigates Up/Down the set this to true, for Left/Right leave it false.")]
         [SerializeField] private bool isUD;
 
         /// <summary>
         /// Bool | Defines if the position should be reset when enabled.
         /// </summary>
-        [ToolTip("Defines whether or not the position is reset when this manager is enabled.")]
+        [Tooltip("Defines whether or not the position is reset when this manager is enabled.")]
         [SerializeField] private bool resetPos;
         [Space(5f)]
 
         /// <summary>
         /// Bool | Defines whether or not to use a grid format for the movement.
         /// </summary>
-        [ToolTip("Defines whether or not to use all directions (grid format).")]
+        [Tooltip("Defines whether or not to use all directions (grid format).")]
         [SerializeField] private bool useGrid;
 
         /// <summary>

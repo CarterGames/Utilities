@@ -30,13 +30,13 @@ namespace CarterGames.Utilities
         /// Bool | Should the scaling effect happen?
         /// </summary>
         [Header("Scaling Settings")]
-        [ToolTip("Defines whether or not effect should happen even if in the effects event.")]
+        [Tooltip("Defines whether or not effect should happen even if in the effects event.")]
         [SerializeField] private bool shouldScaleOnHover;
 
         /// <summary>
         /// Float | Defines how much the element scales by.
         /// </summary>
-        [ToolTip("Defines how much to scale by.")]
+        [Tooltip("Defines how much to scale by.")]
         [SerializeField] private float scaleFactor;
 
         /// <summary>

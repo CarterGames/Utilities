@@ -31,7 +31,7 @@ namespace CarterGames.Utilities
         /// Bool | Defines if the effect should happen or not.
         /// </summary>
         [Header("Colour Change Settings")]
-        [ToolTip("Controls if the effect should happen.")]
+        [Tooltip("Controls if the effect should happen.")]
         [SerializeField] private bool shouldChangeColour;
 
         /// <summary>

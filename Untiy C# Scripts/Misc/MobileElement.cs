@@ -32,7 +32,7 @@ namespace CarterGames.Utilities
         /// <summary>
         /// MobileElementActions | The action that will happen on this object.
         /// </summary>
-        [ToolTip("The action to perform on this object.")]
+        [Tooltip("The action to perform on this object.")]
         public MobileElementActions elementActions;
 
 
@@ -46,18 +46,14 @@ namespace CarterGames.Utilities
             switch (elementActions)
             {
                 case MobileElementActions.SetActive:
-#if UNITY_ANDROID
-                    gameObject.SetActive(true);
-#elseif UNITY_IOS
+#if UNITY_ANDROID || UNITY_IOS
                     gameObject.SetActive(true);
 #else
                     gameObject.SetActive(false);
 #endif
                     break;
                 case MobileElementActions.EnableButton:
-#if UNITY_ANDROID
-                    GetComponent<Button>().interactable = true;
-# elseif UNITY_IOS
+#if UNITY_ANDROID || UNITY_IOS
                     GetComponent<Button>().interactable = true;
 #else
                     GetComponent<Button>().interactable = false;

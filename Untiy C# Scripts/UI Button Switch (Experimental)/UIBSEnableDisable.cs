@@ -30,13 +30,13 @@ namespace CarterGames.Utilities
         /// Bool | Defines if the effect should happen or not.
         /// </summary>
         [Header("Enable/Disable Settings")]
-        [ToolTip("Controls if the effect should happen.")]
+        [Tooltip("Controls if the effect should happen.")]
         [SerializeField] private bool shouldEnableDisable;
 
         /// <summary>
         /// GameObject Array | all elements to effect.
         /// </summary>
-        [ToolTip("Defines what objects are toggled by this effect.")]
+        [Tooltip("Defines what objects are toggled by this effect.")]
         [SerializeField] private GameObject[] toEnableDisable;
 
         /// <summary>

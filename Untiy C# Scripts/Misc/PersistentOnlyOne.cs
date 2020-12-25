@@ -27,7 +27,7 @@ namespace CarterGames.Utilities
         /// String | The ID to check against when removing duplicates of this script (so it doesn't remove different persistent objects).
         /// </summary>
         [Header("Grouping ID")]
-        [ToolTip("The string to match on any duplicates of this class.")]
+        [Tooltip("The string to match on any duplicates of this class.")]
         public string singletonID;
 
         /// <summary>
@@ -50,8 +50,8 @@ namespace CarterGames.Utilities
         {
             DontDestroyOnLoad(this.gameObject);
 
-            objects = FindObjectsOfType<Singleton>();
-            id = FindObjectsOfType<Singleton>().Length;
+            objects = FindObjectsOfType<PersistentOnlyOne>();
+            id = FindObjectsOfType<PersistentOnlyOne>().Length;
 
             for (int i = 0; i < objects.Length; i++)
             {
