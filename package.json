@@ -1,0 +1,18 @@
+{
+  "name": "com.cartergames.utilities",
+  "displayName": "Utilities",
+  "author": "Carter Games",
+  "version": "0.1.1",
+  "unity": "2018.1",
+  "description": "A collection of scripts that have useful abilites and can be applied to a project with ease. All scripts in this repo are free to use in projects, but do note they are designed to do what we needed them to do so they may be a perfect fit for your games.",
+  "keywords": [
+    "utility",
+    "unity"
+  ],
+  "category": "Unity",
+  "unityRelease": "0f1",
+  "type": "library",
+  "dependencies": {
+    "com.unity.inputsystem": "1.0.0"
+  }
+}
