@@ -3,7 +3,8 @@ A collection of scripts that have useful abilites and can be applied to a projec
 All scripts in this repo  are free to use in projects, but do note they are designed to do what we needed them to do so they may be a perfect fit for your games. 
 
 ## Status
-![](https://img.shields.io/badge/Status-In%20Development-666614)
+![][status-shield]  [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url]
 
 The library is still in development at the moment, we are constantly adding to it when we find new things that we need in our games. 
 
@@ -45,3 +46,16 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Email: - hello@carter.games
 
 Discord: - https://carter.games/discord
+
+
+[status-shield]: https://img.shields.io/badge/Status-In%20Development-666614?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/cartergames/utilities.svg?style=for-the-badge&color=8B881D
+[contributors-url]: https://github.com/cartergames/utilities/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/cartergames/utilities.svg?style=for-the-badge
+[forks-url]: https://github.com/github_username/repo/network/members
+[stars-shield]: https://img.shields.io/github/stars/cartergames/utilities.svg?style=for-the-badge
+[stars-url]: https://github.com/github_username/repo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/cartergames/utilities.svg?style=for-the-badge&color=248633
+[issues-url]: https://github.com/github_username/repo/issues
+[license-shield]: https://img.shields.io/github/license/cartergames/utilities.svg?style=for-the-badge&color=248633
+[license-url]: https://github.com/cartergames/utilities/blob/master/LICENSE
