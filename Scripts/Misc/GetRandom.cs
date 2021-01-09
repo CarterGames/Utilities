@@ -7,12 +7,17 @@
  *  Get Random
  *	    A variety of options to provide random values, instead of using Random.Range.
  *			
+ *	Purpose:
+ *	    To replace the Random.Range Method with something that is easier to not mistype, 
+ *	    as the Random.RandomRange method is a thing and sometimes getting things like a 
+ *	    random vector is a pain to type out.
+ *			
  *  Written by:
  *      Jonathan Carter
  *      E: jonathan@carter.games
  *      W: https://jonathan.carter.games
  *			        
- *	Last Updated: 18/12/2020 (d/m/y)						
+ *	Last Updated: 09/01/2021 (d/m/y)						
  * 
 ****************************************************************************************************************************/
 
@@ -34,8 +39,7 @@ namespace CarterGames.Utilities
         }
 
 
-        /// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        /// <summary>
+        /// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         /// Property | Random Int (user defined min/max, default = 0, 1)
         /// </summary>
         /// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -70,6 +74,21 @@ namespace CarterGames.Utilities
             {
                 return new Color32((byte)Random.Range(0, 255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
             }
+        }
+
+
+        /// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Property | Random HSV Color (0-255)
+        ///   Added In: Detective Notes
+        /// </summary>
+        /// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        public static Color ColorHSV(int defaultH, int defaultS, int defaultV)
+        {
+            float _floatH = defaultH / 360f;
+            float _floatS = defaultS / 100f;
+            float _floatV = defaultV / 100f;
+            return Color.HSVToRGB(_floatH, _floatS, _floatV);
         }
 
 

@@ -193,5 +193,24 @@ namespace CarterGames.Utilities
             else
                 return false;
         }
+
+
+        /// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Method | Checks to see if a value is within the defined min and max values.
+        /// Added In: Detective Notes.
+        /// </summary>
+        /// <param name="tocCheck">Int | The value to check</param>
+        /// <param name="lowerBound">Int | The lower value</param>
+        /// <param name="UpperBound">Int | The upper value</param>
+        /// <returns>true if within bounds, false if not.</returns>
+        /// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        public static bool IsWithinBounds(int tocCheck, int lowerBound, int UpperBound)
+        {
+            if (tocCheck >= lowerBound && tocCheck <= UpperBound)
+                return true;
+            else
+                return false;
+        }
     }
 }
